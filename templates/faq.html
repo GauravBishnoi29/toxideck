@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel = "shortcut icon" type="image/jpg" href = "{{url_for('static', filename='dark.png')}}">
+
+<style>
+body,h1 {
+    font-family: "Work Sans"; 
+    color: white; 
+    text-align: center; 
+    vertical-align: middle; 
+    font-weight: bold;
+}
+
+body, html {height: 100%; background-color: #101010;}
+
+.x1 {font-family: "Work Sans"; padding-top: 0%; font-size: 40px; margin-bottom: 1.2%;}
+
+.x2 {font-family: "Work Sans"; padding-top: 0.5%; font-size: 20px; text-align: left; margin-left: 15%;}
+
+.x3 {font-family: "Open Sans"; ; font-size: 16px; text-align: left; margin-left: 15%; margin-right: 15%; font-weight: normal}
+
+input {
+    size: 100px; 
+    font-family: 'Work Sans';
+}
+
+.header {
+    padding-top: 0.5%;
+    font-weight: normal;
+}
+
+.x {
+    font-family: 'Work Sans';
+}
+
+.footer {
+    padding-top: 10%; 
+    font-weight: normal;
+}
+
+a {
+  color: white; 
+  text-decoration:none;
+}
+
+a:hover {
+  transition: 1s;
+}
+
+
+.link:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #a9a9a9;
+  transition: 1s;
+  
+}
+
+.link1 {
+    border-bottom: 1px solid white;
+}
+
+.link1:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #a9a9a9;
+  transition: 1s;
+  
+}
+</style>
+
+<!---- Flask part -->
+
+<title> Toxideck </title>
+
+<body>
+<h3 class = header><a href = "{{ url_for ('index') }}" class = link>Home</a> | <a href = "{{ url_for ('about') }}" class = link>About Us</a></h3>
+<p class = x1> Frequently Asked Questions </p>
+
+<p class = x2> > What is Toxideck? </p>
+<hr width="70%">
+<p class = x3> Toxideck is a web-based application that uses an nlp model to predict the probability of toxicity presents in our comments</a>. </p>
+
+<p class = x2> > How does it work? </p>
+<hr width="70%">
+<p class = x3> Our model was built on Python using various libraries of nltk 
+</p>
+
+<p class = x2> > How do I use Toxideck? </p>
+<hr width="70%">
+<p class = x3> Simple! Just go to our <a href = "{{ url_for ('index') }}" class = link1>homepage</a>,Now you have two option either you can upload scrapped data file and click on upload or you can manually write comments in the inpot box. Once processed, you'll be able to view the algorithm's prediction. </p>
+
+<p class = x2> > Why use Toxideck? </p>
+<hr width="70%">
+<p class = x3> Toxideck uses deeplearning models to predict toxicity levels in your comments with an accuracy of around 95% </p>
+
+<p class = x2> > How is this practical?? </p>
+<hr width="70%">
+<p class = x3> Cyberbullying is a major societal problem that can lead to teen suicides
+  Toxic comment classifier helps to filter out toxic words to make online world a safer and more harmonious place. </p>
+
+<p class = x2> > What is the outcome?</p>
+<hr width="70%">
+<p class = x3> Flask app that outputs probability that a comment falls under various categories of toxicity.</p>
+
+<br>
+</body>
+</html>
